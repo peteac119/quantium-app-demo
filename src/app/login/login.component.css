@@ -7,11 +7,24 @@ input {
     border-bottom: 1px solid gray;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
+.login-main-container{
+    position: relative;
     width: 100%;
-    background-color: white;
+    height: 100%;
+    background: white;
+}
+
+.main-logo {
+    display: block;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-panel{
+    padding-top: 100px;
+    margin: auto;
+    width: 50%;
 }
 
 #power-text {
@@ -20,11 +33,17 @@ input {
     color: gray;
 }
 
-.footer .left-footer {
+.footer {
+    margin-top: 100px;
+    height: 100px;
+    width: 100%;
+}
+
+.left-footer {
     float: left;
 }
 
-.footer .right-footer {
+.right-footer {
     float: right;
     margin-top: 35px;
     margin-right: 20px;
