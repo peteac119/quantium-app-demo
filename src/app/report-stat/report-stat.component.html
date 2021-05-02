@@ -1,22 +1,33 @@
 <div class="page-container">
-    <div>
-        <img src={{company.getIconImagePath()}} class="company-icon">
-        <div class="sidebar">
-            <div class="list-items">
-                <div class="list-item" (click)="onMainMenuSelected($event)">Investment Summary</div>
-                <div class="list-item" (click)="onMainMenuSelected($event)">Fund Performance</div>
-                <div class="list-item">Highlighted portfolio</div>
-                <div class="list-item">File Manager</div>
-            </div>
-        </div>
+    <div class="sidebar-container">
+        <img src={{company.getIconImagePath()}} class="company-icon"> 
+        <nav class="sidebar">
+            <ul>
+                <li>Investment Summary</li>
+                <li (click)="onFeatureSelected($event)">Fund Performance <fa-icon [icon]="featureArrowIcon"></fa-icon>
+                    <ul [ngStyle]="{'display': showFeature ? 'block' : 'none'}">
+                        <li *ngFor="let report of company.getReportStatuses()">{{report.getReportTitle()}}</li>
+                    </ul>
+                </li>
+                <li (click)="onHighLightedSelected($event)">Highlighted portfolio <fa-icon [icon]="highedLightArrowIcon"></fa-icon>
+                    <ul [ngStyle]="{'display': showHighLighted ? 'block' : 'none'}">
+                        <li>Alibaba</li>
+                        <li>Taikang insurance</li>
+                        <li>GME Asset</li>
+                    </ul>
+                </li>
+                <li (click)="onFileManagerSelected($event)">File Manager <fa-icon [icon]="fileManagerArrowIcon"></fa-icon>
+                    <ul [ngStyle]="{'display': showFileManager ? 'block' : 'none'}">
+                        <li>Tax center</li>
+                        <li>Other documents</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <span id=power-text>Powered By</span><span><img src="../../assets/images/quantium_logo_sm.png"></span>
     </div>
     
     <div>
         <router-outlet></router-outlet>
-    </div>
-</div>
-<div class="footer">
-    <div class="left-footer">
-        <span id=power-text>Powered By</span><span><img src="../../assets/images/quantium_logo_sm.png"></span>
     </div>
 </div>

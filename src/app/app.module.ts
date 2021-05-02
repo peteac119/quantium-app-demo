@@ -9,6 +9,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CompanycardComponent } from './welcome/companycard/companycard.component';
 import { ReportStatComponent } from './report-stat/report-stat.component';
 import { InvestmentSummaryComponent } from './report-stat/investment-summary/investment-summary.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { InvestmentSummaryComponent } from './report-stat/investment-summary/inv
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
