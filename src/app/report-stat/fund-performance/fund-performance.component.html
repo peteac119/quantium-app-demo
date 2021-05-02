@@ -1,0 +1,63 @@
+<div class="upper-bar">
+    <fa-icon [icon]="faBars"></fa-icon>
+</div>
+    
+    
+<div class="report-container">
+    <div class="report-title">
+        <p>Fund performance: {{currentReport.getCompanyName()}} {{currentReport.getReportTitle()}}  </p>
+    </div>
+    <div class="graph-report-container">
+        <div class="pie-chart">
+            <google-chart
+                [title]="pieChartProperties.getTitle()"
+                [type]="pieChartProperties.getType()"
+                [data]="pieChartProperties.getData()"
+                [options]="pieChartProperties.getOptions()"
+                [width]="600"
+                [height]="400"
+            >
+            </google-chart>
+        </div>
+
+        <div class="graph-chart">
+            <!-- <google-chart
+                [title]="title"
+                [type]="'LineChart'"
+                [data]="data"
+                [columns]="columnNames"
+                [options]="options"
+                [width]="600"
+                [height]="400"
+            >
+            </google-chart> -->
+            <google-chart
+                [title]="lineChartProperties.getTitle()"
+                [type]="lineChartProperties.getType()"
+                [data]="lineChartProperties.getData()"
+                [columns]="lineChartProperties.getColumnNames()"
+                [options]="lineChartProperties.getOptions()"
+                [width]="600"
+                [height]="400"
+            >
+            </google-chart>
+        </div>
+    </div>
+
+    <div class="portfolio-summary">
+        <div class="portfolio-header">
+            <div class="portfolio-text">
+                <p style="font-weight: bold; font-size: 20px;">Portfolio summary</p>
+                <p style="font-weight: 500;">Realization and Portfolio Summary in USD Million unless otherwise stated</p>
+            </div>
+            <div class="view-by-switch">
+                View By:
+            </div>
+        </div>
+
+        <div class="portfolio-data-table">
+
+        </div>
+    </div>
+</div>
+

@@ -10,6 +10,8 @@ import { CompanycardComponent } from './welcome/companycard/companycard.componen
 import { ReportStatComponent } from './report-stat/report-stat.component';
 import { InvestmentSummaryComponent } from './report-stat/investment-summary/investment-summary.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { FundPerformanceComponent } from './report-stat/fund-performance/fund-performance.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     WelcomeComponent,
     CompanycardComponent,
     ReportStatComponent,
-    InvestmentSummaryComponent
+    InvestmentSummaryComponent,
+    FundPerformanceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

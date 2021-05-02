@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CompanyDetail } from '../model/companyDetail';
 import { CompanyDataServiceService } from '../service/company-data-service.service';
 import { faChevronDown, faChevronRight, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { state } from '@angular/animations';
 
 @Component({
   selector: 'app-report-stat',
@@ -62,5 +63,4 @@ export class ReportStatComponent implements OnInit {
       this.router.navigate(['investment-summary']);
     }
   }
-
 }

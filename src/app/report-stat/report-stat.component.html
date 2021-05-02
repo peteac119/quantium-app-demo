@@ -3,10 +3,13 @@
         <img src={{company.getIconImagePath()}} class="company-icon"> 
         <nav class="sidebar">
             <ul>
-                <li>Investment Summary</li>
+                <li [routerLink]="['investment-summary']">Investment Summary</li>
                 <li (click)="onFeatureSelected($event)">Fund Performance <fa-icon [icon]="featureArrowIcon"></fa-icon>
                     <ul [ngStyle]="{'display': showFeature ? 'block' : 'none'}">
-                        <li *ngFor="let report of company.getReportStatuses()">{{report.getReportTitle()}}</li>
+                        <!-- <li *ngFor="let report of company.getReportStatuses()" 
+                         (click)=onReportSelected(report)>{{report.getReportTitle()}}</li> -->
+                        <li *ngFor="let report of company.getReportStatuses()" 
+                        [routerLink]="['fund-performance']" [state]="report">{{report.getReportTitle()}}</li>
                     </ul>
                 </li>
                 <li (click)="onHighLightedSelected($event)">Highlighted portfolio <fa-icon [icon]="highedLightArrowIcon"></fa-icon>
@@ -27,7 +30,8 @@
         <span id=power-text>Powered By</span><span><img src="../../assets/images/quantium_logo_sm.png"></span>
     </div>
     
-    <div>
+    <div style="width: 100%; height: 100%;">
         <router-outlet></router-outlet>
     </div>
+    
 </div>
