@@ -1,0 +1,8 @@
+<div class="empty-header"></div>
+<div class="welcome-panel">Welcome to Asia Alternative to Quantium Investor Portal</div>
+<app-companycard *ngFor="let companyDetail of companyDetails" 
+[company]="companyDetail"
+(eventHandler)="onCardSelected($event)"
+class="card py-5 mb-3 card-style">
+</app-companycard>
+ 

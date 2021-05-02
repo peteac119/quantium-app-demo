@@ -1,0 +1,46 @@
+.page-container {
+    height: 100%;
+    display: flex;
+}
+
+.company-icon {
+    margin: 20px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 300px;
+}
+
+.list-items {
+    padding-top: 50px;
+}
+
+.list-item {
+    display: flex;
+    position: relative;
+    padding: 20px;
+    text-indent: 20px;
+    font-weight: 600;
+}
+
+.list-item:hover {
+    background: rgb(223, 227, 230);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
+
+#power-text {
+    margin-left: 20px;
+    font-weight: 400;
+    color: gray;
+}
+
+.footer .left-footer {
+    float: left;
+}

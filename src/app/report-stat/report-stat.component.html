@@ -1,0 +1,22 @@
+<div class="page-container">
+    <div>
+        <img src={{company.getIconImagePath()}} class="company-icon">
+        <div class="sidebar">
+            <div class="list-items">
+                <div class="list-item" (click)="onMainMenuSelected($event)">Investment Summary</div>
+                <div class="list-item" (click)="onMainMenuSelected($event)">Fund Performance</div>
+                <div class="list-item">Highlighted portfolio</div>
+                <div class="list-item">File Manager</div>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<div class="footer">
+    <div class="left-footer">
+        <span id=power-text>Powered By</span><span><img src="../../assets/images/quantium_logo_sm.png"></span>
+    </div>
+</div>

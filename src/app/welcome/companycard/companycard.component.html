@@ -1,0 +1,24 @@
+<div class="card-body">
+    <div class="icon-image-sec">
+        <img src={{company.getIconImagePath()}}>
+    </div>
+    <div class="detail-panel">
+        <p class="company-name">{{company.getCompanyName()}}</p>
+        <table>
+            <tbody>
+                <tr *ngFor="let reportStatus of company.getReportStatuses()">
+                    <td>
+                        <div [ngClass]="reportStatus.getReportStatus() === 'Reporting' ? 'report-status-blue' : 'report-status-green'">
+                            {{reportStatus.getReportStatus()}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="report-name">
+                            {{reportStatus.getReportTitle()}}
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
