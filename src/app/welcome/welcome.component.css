@@ -24,6 +24,10 @@
     border-radius: 25px;
 }
 
+.card:hover {
+    background: rgb(241, 245, 248);
+}
+
 .card-style {
     max-width: 50rem;
     margin-left: auto;
