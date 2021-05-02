@@ -1,9 +1,8 @@
-.card {
-    border: 2px groove;
-}
-
-.card:hover {
-    background: rgb(223, 227, 230);
+.main-card-list {
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    background: rgb(214, 238, 253);
 }
 
 .empty-header {
@@ -19,12 +18,14 @@
     text-align: center;
     font-size: xx-large;
     font-weight: normal;
-    background-color: white;
+}
+
+.card {
+    border-radius: 25px;
 }
 
 .card-style {
     max-width: 50rem;
-    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }

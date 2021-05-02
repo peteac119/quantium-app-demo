@@ -1,3 +1,7 @@
+.card {
+    border-radius: 25px;
+}
+
 .icon-image-sec {
     display: inline;
     float: left;
